@@ -19,8 +19,7 @@
     }
   </style>
   <script type="text/javascript">
-
-    const isItTime = (now = new Date()) => now.getDay() == 5 && now.getHours() == 9 && now.getMinutes > 15;
+    const isItTime = (now = new Date()) => now.getDay() === 5 && now.getHours() === 9 && now.getMinutes() >= 15;
 
     const formatted = (is) => `<h2>${is ? 'Yes 👌' : 'No 😫'}</h2><h3>${is ? 'Grab some ☕&🥐' : 'Not yet ⏳'}</h3>`;
 
