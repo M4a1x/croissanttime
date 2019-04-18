@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Is it croissant time yet?</title>
+  <meta name="description" content="Is it croissant time yet?">
+  <meta name="author" content="Max Stabel">
+  <style type="text/css">
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      padding-top: 3rem;
+    }
+    h3 {
+      line-height: 0;
+    }
+  </style>
+  <script type="text/javascript">
+
+    const isItTime = (now = new Date()) => now.getDay() == 5 && now.getHours() == 9 && now.getMinutes > 15;
+
+    const formatted = (is) => `<h2>${is ? 'Yes 👌' : 'No 😫'}</h2><h3>${is ? 'Grab some ☕&🥐' : 'Not yet ⏳'}</h3>`;
+
+    const fillContent = (e = document.getElementsByTagName("article")[0]) => e.innerHTML = formatted(isItTime());
+  </script>
+</head>
+
+<body onload="fillContent();">
+  <main>
+    <header>
+      <h1>Is it croissant time yet?</h1>
+    </header>
+    <article>
+      <h2>Who knows?</h2>
+      <h3>Need Javascript for finding out 🤔</h3>
+    </article>
+  </main>
+</body>
+</html>
